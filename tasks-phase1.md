@@ -57,7 +57,21 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
    
 9. Reach YARN UI
    
-   ***place the command you used for setting up the tunnel, the port and the screenshot of YARN UI here***
+   COMMAND:
+
+    ```bash
+    # Create an SSH tunnel using local port 1080
+    gcloud compute ssh tbd-cluster-m \
+    --project=tbd-2024z-303753 \
+    --zone=europe-west1-d -- -D 1080 -N
+
+    # Run Chrome and connect through the proxy (macOS)
+    /usr/bin/google-chrome --proxy-server="socks5://localhost:1080" \
+    --user-data-dir="/tmp/tbd-cluster-m" http://tbd-cluster-m:8088
+    ```
+
+    ![Screenshot 2024-12-02 at 21 52 15](https://github.com/user-attachments/assets/f8fd13ff-5e88-4665-88b2-1be8083d91ed)
+
    
 10. Draw an architecture diagram (e.g. in draw.io) that includes:
     1. VPC topology with service assignment to subnets
