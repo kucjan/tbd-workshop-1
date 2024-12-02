@@ -29,19 +29,20 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
 
 8. Analyze terraform code. Play with terraform plan, terraform graph to investigate different modules.
   
-  Module: vertex-ai-workbench
+  # Module: vertex-ai-workbench
   
-  Description:
+  ## Description
   This module is designed to set up a Virtual Machine (VM) with a pre-configured disk image that includes all the tools required for interacting with infrastructure supporting Big Data analysis. Using this VM is more convenient and efficient than configuring a local private machine to access necessary cloud resources. Additionally, the module provides a user-friendly web interface for seamless interaction.
   
-  Resources:
+  ## Resources
   
-  google_notebooks_instance – Provisions and configures the virtual machine.
-  google_project_service – Enables project-level access to Google services, specifically the Notebooks API in this case.
-  google_project_iam_binding – Assigns a set of permissions (role) to a service account, allowing it to generate short-lived credentials needed for authenticating Google services from Jupyter notebooks.
-  google_storage_bucket – Creates a storage bucket, which is the simplest form of file storage in Google Cloud Storage (GCS).
-  google_storage_bucket_iam_binding – Grants read-only access to the storage bucket for a specific service account. This access is necessary to retrieve the post-startup script.
-  google_storage_bucket_object – Uploads the post-startup configuration script to the GCS bucket during the terraform apply process.
+  - **google_notebooks_instance** – Provisions and configures the virtual machine.  
+  - **google_project_service** – Enables project-level access to Google services, specifically the Notebooks API in this case.  
+  - **google_project_iam_binding** – Assigns a set of permissions (role) to a service account, allowing it to generate short-lived credentials needed for authenticating Google services from Jupyter notebooks.  
+  - **google_storage_bucket** – Creates a storage bucket, which is the simplest form of file storage in Google Cloud Storage (GCS).  
+  - **google_storage_bucket_iam_binding** – Grants read-only access to the storage bucket for a specific service account. This access is necessary to retrieve the post-startup script.  
+  - **google_storage_bucket_object** – Uploads the post-startup configuration script to the GCS bucket during the `terraform apply` process.
+
 
    Graph:
 
