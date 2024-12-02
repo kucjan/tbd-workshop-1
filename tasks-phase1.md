@@ -15,13 +15,16 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
   ![img.png](doc/figures/discounts.png)
 
 5. From avaialble Github Actions select and run destroy on main branch.
+
+![Screenshot 2024-12-02 at 20 00 53](https://github.com/user-attachments/assets/c36967fe-7f0a-4188-a62c-58a0059da6e8)
    
 7. Create new git branch and:
     1. Modify tasks-phase1.md file.s
     
     2. Create PR from this branch to **YOUR** master and merge it to make new release. 
     
-    ***place the screenshot from GA after succesfull application of release***
+    ![Screenshot 2024-12-02 at 20 05 15](https://github.com/user-attachments/assets/779f81bf-0cc4-4813-aec4-8256ff5395ee)
+
 
 
 8. Analyze terraform code. Play with terraform plan, terraform graph to investigate different modules.
