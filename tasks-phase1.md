@@ -98,7 +98,14 @@ create a sample usage profiles and add it to the Infracost task in CI/CD pipelin
   
 12. Start an interactive session from Vertex AI workbench:
 
-    ***place the screenshot of notebook here***
+  COMMAND:
+
+  ```bash
+  gcloud compute --project "tbd-2024z-303753" ssh --zone "europe-west1-b" "tbd-2024z-303753 notebook" -- -L 8080:localhost:8080
+  ```
+
+  ![Screenshot 2024-12-02 at 22 10 59](https://github.com/user-attachments/assets/69301af6-4167-4629-9e4d-83543c82a2a7)
+
    
 13. Find and correct the error in spark-job.py
 
