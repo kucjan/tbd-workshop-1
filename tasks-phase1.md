@@ -29,12 +29,12 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
 
 8. Analyze terraform code. Play with terraform plan, terraform graph to investigate different modules.
   
-  # Module: vertex-ai-workbench
+  Module: vertex-ai-workbench
   
-  ## Description
+  Description
   This module is designed to set up a Virtual Machine (VM) with a pre-configured disk image that includes all the tools required for interacting with infrastructure supporting Big Data analysis. Using this VM is more convenient and efficient than configuring a local private machine to access necessary cloud resources. Additionally, the module provides a user-friendly web interface for seamless interaction.
   
-  ## Resources
+  Resources
   
   - **google_notebooks_instance** – Provisions and configures the virtual machine.  
   - **google_project_service** – Enables project-level access to Google services, specifically the Notebooks API in this case.  
