@@ -29,6 +29,14 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
 
 8. Analyze terraform code. Play with terraform plan, terraform graph to investigate different modules.
 
+   Graph:
+
+    ```
+    cd modules/vertex-ai-workbench
+    terraform init -upgrade
+    terraform graph -type=plan | dot -Tpng > terraform-plan-graph-vertex-ai-workbench.png
+    ```
+
     ![terraform-vertex](https://github.com/user-attachments/assets/13e7c28c-551e-4388-bd25-147938e5f2f7)
 
    
