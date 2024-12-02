@@ -29,7 +29,8 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
 
 8. Analyze terraform code. Play with terraform plan, terraform graph to investigate different modules.
 
-    ***describe one selected module and put the output of terraform graph for this module here***
+    ![terraform-vertex](https://github.com/user-attachments/assets/13e7c28c-551e-4388-bd25-147938e5f2f7)
+
    
 9. Reach YARN UI
    
