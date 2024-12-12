@@ -92,11 +92,14 @@ create a sample usage profiles and add it to the Infracost task in CI/CD pipelin
 11. Create a BigQuery dataset and an external table using SQL
     
     ***place the code and output here***
+    <img width="1440" alt="Screenshot 2024-12-12 at 20 40 16" src="https://github.com/user-attachments/assets/2c0833a7-2351-4b00-b074-9a498bdf24f4" />
+
    
     ***why does ORC not require a table schema?***
-
+    
+ORC doesn’t need a separate table schema because it saves all the details about the data, like column names and types, directly in the file. This means you can use the file without worrying about managing an external schema.
   
-12. Start an interactive session from Vertex AI workbench:
+13. Start an interactive session from Vertex AI workbench:
 
   COMMAND:
 
