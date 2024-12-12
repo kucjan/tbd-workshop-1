@@ -158,7 +158,7 @@ jobs:
                             --out-file=/tmp/infracost-base.json
     - name: Checkout PR branch
       uses: actions/checkout@v3
-          - name: Generate Infracost cost estimate
+    - name: Generate Infracost cost estimate
       run: |
         infracost breakdown --path="." \
                             --usage-file infracost-usage.yml \
