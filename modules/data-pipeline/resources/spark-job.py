@@ -41,7 +41,7 @@ df = df.orderBy(df["sum_word_count"].desc()).cache()
 print("The resulting schema is")
 df.printSchema()
 
-print("The top words in shakespeare are")
+print("The toop words in shakespeare are")
 df.show()
 df.write.mode("overwrite").orc(DATA_BUCKET)
 
