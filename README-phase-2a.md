@@ -20,7 +20,7 @@ Worth to read:
 
    ***15***
 
-   ***Link to forked repo***
+   ***[Link to forked repo](https://github.com/kucjan/tbd-workshop-1/tree/master)***
 
 3. Sync your repo with https://github.com/bdg-tbd/tbd-workshop-1.
 
