@@ -113,11 +113,12 @@ ORC doesn’t need a separate table schema because it saves all the details abou
 
    
 13. Find and correct the error in spark-job.py
+    Solution was found in logs on GCP, filtered for errors and found a message about incorrect bucket address (Bucket not found)
 
     <img width="1123" alt="image" src="https://github.com/user-attachments/assets/f7914ae7-78a7-4a7a-bc47-d32cb4a14eb7" />
 
 
-14. Additional tasks using Terraform:
+15. Additional tasks using Terraform:
 
     1. Add support for arbitrary machine types and worker nodes for a Dataproc cluster and JupyterLab instance
 
