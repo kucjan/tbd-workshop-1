@@ -113,7 +113,8 @@ ORC doesn’t need a separate table schema because it saves all the details abou
    
 13. Find and correct the error in spark-job.py
 
-    ***describe the cause and how to find the error***
+    <img width="1123" alt="image" src="https://github.com/user-attachments/assets/f7914ae7-78a7-4a7a-bc47-d32cb4a14eb7" />
+
 
 14. Additional tasks using Terraform:
 
