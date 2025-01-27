@@ -65,7 +65,7 @@ terraform init -backend-config=../env/backend.tfvars
 ```
 * Apply
 ```bash
-# authenticate Docker backend with GCP
+# authenticate Docker backend with  GCP
 gcloud auth configure-docker
 # create CI/CD integration using Workload Identity
 terraform apply -var-file ../env/project.tfvars -var-file conf/github_actions.tfvars -compact-warnings
