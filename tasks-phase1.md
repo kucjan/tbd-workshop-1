@@ -120,6 +120,8 @@ ORC doesn’t need a separate table schema because it saves all the details abou
 
 15. Additional tasks using Terraform:
 
+    TODO:
+
     1. Add support for arbitrary machine types and worker nodes for a Dataproc cluster and JupyterLab instance
 
     ***place the link to the modified file and inserted terraform code***
