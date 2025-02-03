@@ -86,10 +86,14 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
 For all the resources of type: `google_artifact_registry`, `google_storage_bucket`, `google_service_networking_connection`
 create a sample usage profiles and add it to the Infracost task in CI/CD pipeline. Usage file [example](https://github.com/infracost/infracost/blob/master/infracost-usage-example.yml) 
 
-   [infracost_usage.yml](https://github.com/kucjan/tbd-workshop-1/blob/master/infracost-usage.yml])
+  Link to Infracost Raport:
+  
+ [raport](https://github.com/kucjan/tbd-workshop-1/pull/6#issuecomment-2539783142)
+ 
+![image](https://github.com/user-attachments/assets/e6749920-6bb0-41ae-b052-ee95175bc221)
 
-   <img width="1123" alt="image" src="https://github.com/user-attachments/assets/30a044b0-4c6e-496d-8614-a23985a8289f" />
 
+  
 
 11. Create a BigQuery dataset and an external table using SQL
     
