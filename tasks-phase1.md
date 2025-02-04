@@ -74,10 +74,52 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
 
    
 10. Draw an architecture diagram (e.g. in draw.io) that includes:
-    1. VPC topology with service assignment to subnets
-    2. Description of the components of service accounts
-    3. List of buckets for disposal
-    4. Description of network communication (ports, why it is necessary to specify the host for the driver) of Apache Spark running from Vertex AI Workbech
+    1. VPC Topology with Service Assignment to Subnets  
+    
+    - **VPC**: A global Virtual Private Cloud (VPC) manages network communication.  
+    - **Subnets**:  
+      - **composer-subnet (CIDR: 10.11.10.0/24)** – Used for Google Cloud Composer to run workflows.  
+      - **vertex-ai-subnet (CIDR: 10.10.10.0/24)** – Hosts Vertex AI Workbench and Dataproc for AI and data processing.  
+    - **Routing**:  
+      - Managed by the global VPC.  
+      - NAT gateway enables internet access only where necessary.  
+    
+    2. Description of the Components of Service Accounts  
+    
+    **tbd-composer-sa**  
+    Used by Cloud Composer for workflow management and Dataproc integration.  
+    **Roles:**  
+    - `roles/composer.worker` – Allows Cloud Composer to run workflows.  
+    - `roles/dataproc.editor` – Manages Dataproc clusters.  
+    - `roles/iam.serviceAccountUser` – Enables impersonation and temporary credential assignment.  
+    
+    **iac**  
+    Handles infrastructure deployment and automation using Terraform.  
+    **Permissions:** Manages cloud infrastructure resources.  
+    
+    **tbd-terraform**  
+    Used for managing Terraform state files stored in cloud buckets.  
+    **Purpose:** Ensures Terraform state consistency in `tbd-state-bucket`.  
+    
+    3. List of Buckets for Disposal  
+    
+    - **notebook-conf-bucket** – Stores initialization scripts for Vertex AI Workbench.  
+    - **tbd-code-bucket** – Contains Spark job scripts.  
+    - **tbd-data-bucket** – Stores data required for Spark processing.  
+    - **tbd-state-bucket** – Holds Terraform state files for tracking infrastructure changes.  
+    
+    4. Description of Network Communication (Ports, Why It Is Necessary to Specify the Host for the Driver) of Apache Spark Running from Vertex AI Workbench  
+    
+    **Apache Spark Communication**  
+    - **Spark Driver → Spark Master** (port **7077**) – The driver submits tasks to the master.  
+    - **Spark Master → Spark Workers** (port **7077**) – The master distributes tasks to the workers.  
+    - **Spark Driver Monitoring** (port **4040**) – Provides a web UI for tracking jobs.  
+    
+    **Why Specify the Host for the Driver?**  
+    - Vertex AI Workbench and Dataproc run in different subnets.  
+    - Explicitly setting the driver’s host ensures proper communication between Spark components using private IPs.  
+    - Prevents connectivity issues when tasks are assigned across subnets.  
+
   
     ![tbd-architecture](https://github.com/user-attachments/assets/f02c095f-a4aa-4ba4-b16e-d1294932d3cf)
 
